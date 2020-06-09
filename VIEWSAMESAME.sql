@@ -11,3 +11,10 @@ CREATE VIEW LISTE_ACTIVITES AS SELECT a.TITRE, r.NOM, r.PRENOM FROM ACTIVITES a 
 GO
 SELECT * FROM LISTE_ACTIVITES
 GO
+
+---modification affiche également le nombre d'inscrit par activités
+
+alter VIEW LISTE_ACTIVITES AS SELECT distinct a.CODE_ACTIVITES, a.TITRE, r.NOM, r.PRENOM, count(*)over(partition by i.ID_ACTIVITES) as "nombre d'inscrits" FROM ACTIVITES a 
+join RESPONSABLE r   on a.ID_RESPONSABLE=r.CODE_RESPONSABLE
+join INSCRIPTION  i on  a.CODE_ACTIVITES= i.ID_ACTIVITES
+GO

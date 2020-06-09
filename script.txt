@@ -64,36 +64,294 @@ GO
 
 
 GO
-INSERT INTO JEUNES VALUES('Fleury','Rose',17,'rosyyy@mail.com','dgdtgh',1030)
-INSERT INTO JEUNES VALUES('Natura', 'Filip',12,'fifo@mail.com','',1210)
-INSERT INTO JEUNES VALUES('Mitura', 'Ofely',8,'Ofifi@mail.com','',1030)
-INSERT INTO JEUNES VALUES('Mito', 'Tommy',7,'mytho@mail.com','',1030)
-INSERT INTO JEUNES VALUES('Pavoshko', 'Rodrigue',16,'Roro@mail.com','',1000)
+---- code qui permet une remise a zero de la base de données 
+
+TRUNCATE TABLE INSCRIPTION
+DELETE FROM JEUNES WHERE CODE_JEUNES >= 0
+DELETE FROM ACTIVITES WHERE CODE_ACTIVITES > 0
+DELETE FROM RESPONSABLE WHERE CODE_RESPONSABLE >= 0
+
+
+DBCC CHECKIDENT (JEUNES, RESEED, 13000)
+DBCC CHECKIDENT (RESPONSABLE, RESEED, 2020)
+DBCC CHECKIDENT (ACTIVITES, RESEED, 0)
+
+-------------------------------------------------
+INSERT INTO JEUNES VALUES('el habsati','fatima',6,'dgsdfg@mail.com','rue des jouets 6',1210)
+INSERT INTO JEUNES VALUES('taibi','ahmed',8,'dfdsf@mail.com','rue des feuillles 75',1030)
+INSERT INTO JEUNES VALUES('chahid','mohamed amine',12,'dfgsdg@mail.com','rue des marais 258b ',1030)
+INSERT INTO JEUNES VALUES('makhlouf','nassim',5,'frgdf@mail.com','rue du cadran 14',1030)
+INSERT INTO JEUNES VALUES('diangambowa','yoannis',5,'dfvwds@mail.com','',1030)
+INSERT INTO JEUNES VALUES('daghmouni','salim',6,'fdwsgqre@mail.com','',1030)
+INSERT INTO JEUNES VALUES('daghmouni','yacob',7,'sdfvgr@mail.com','',1030)
+INSERT INTO JEUNES VALUES('mossadi','houdaifa',8,'qfrgq@mail.com','',1140)
+INSERT INTO JEUNES VALUES('mossadi','soufiane',9,'sdfqg@mail.com','',1030)
+INSERT INTO JEUNES VALUES('alilou','mohamed rayan',10,'gqrwfgq@mail.com','',1140)
+INSERT INTO JEUNES VALUES('el arnouki ','imrane',7,'gdfggr2544@mail.com','',1210)
+INSERT INTO JEUNES VALUES('naniot','edgar',8,'fq<rgt@mail.com','',1210)
+INSERT INTO JEUNES VALUES('el arnouki' ,'mohamed',9,'4fdfdg563@mail.com','',1030)
+INSERT INTO JEUNES VALUES('cevik','berat',15,'dgfvrse@mail.com','',1080)
+INSERT INTO JEUNES VALUES('cevik','bekim',10,'qegfqey43@mail.com','',1030)
+INSERT INTO JEUNES VALUES('hammouda','bilal',7,'fserg2354@mail.com','',1210)
+INSERT INTO JEUNES VALUES('el habsati' ,'ibrahim',7,'dfbgxsd453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('akazzab','mohamed said',6,'srhyey45@mail.com','',1030)
+INSERT INTO JEUNES VALUES('slimani','jad',7,'hdrhy-436@mail.com','',1030)
+INSERT INTO JEUNES VALUES('arradi','hamza',10,'serhteh48568@mail.com','',1030)
+INSERT INTO JEUNES VALUES('makhlouf','issam',7,'fgjsd456@mail.com','',1030)
+INSERT INTO JEUNES VALUES('el arnouki' ,'ilias',12,'hsrxt453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('el hamdi',	'soufiane',12,'sthstr46@mail.com','',1040)
+INSERT INTO JEUNES VALUES('salmi','mehdi',6,'thser465@mail.com','',1030)
+INSERT INTO JEUNES VALUES('eryuruk','elizan',6,'rhgsert4563@mail.com','',1030)
+INSERT INTO JEUNES VALUES('el arnouki' ,'adam',6,'erysgswer112@mail.com','',1030)
+INSERT INTO JEUNES VALUES('ben ssar','ginan',13,'fghsr145@mail.com','',1140)
+INSERT INTO JEUNES VALUES('bouali','bilal',14,'fgswer1532@mail.com','',1140)
+INSERT INTO JEUNES VALUES('bouali','hamza',14,'fgq1423@mail.com','',1140)
+INSERT INTO JEUNES VALUES('el addass','yacine',13,'dfAE16@mail.com','',1210)
+INSERT INTO JEUNES VALUES('hachmi','abdelouadoud',12,'SDFGR436@mail.com','',1030)
+INSERT INTO JEUNES VALUES('chahid','maryam',11,'XDFH4563@mail.com','',1030)
+INSERT INTO JEUNES VALUES('chahid','rania',14,'DFHSGTX465@mail.com','',1030)
+INSERT INTO JEUNES VALUES('aabid','majda',15,'dfhs42345@mail.com','',1000)
+INSERT INTO JEUNES VALUES('aabid','yasmina',13,'qrgqesr453@mail.com','',1000)
+INSERT INTO JEUNES VALUES('mechti','manal',12,'rfhse453@mail.com','',1210)
+INSERT INTO JEUNES VALUES('mechti','kenza',11,'fqer456@mail.com','',1210)
+INSERT INTO JEUNES VALUES('assbai','kamal',10,'fbwsg453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('amrani haljoul','hamza',9,'gserth452@mail.com','',1210)
+INSERT INTO JEUNES VALUES('karyouhi','jalal',7,'gqr45637@mail.com','',1210)
+INSERT INTO JEUNES VALUES('karyouhi','otman',8,'gser45@mail.com','',1030)
+INSERT INTO JEUNES VALUES('teccan','osman',9,'serth452@mail.com','',1030)
+INSERT INTO JEUNES VALUES('massabuau','charles',6,'dsgsre453@mail.com','',1040)
+INSERT INTO JEUNES VALUES('massabuau','victor',11,'sdfhr453@mail.com','',1040)
+INSERT INTO JEUNES VALUES('ayezafene','wafae',12,'gfhjdrt43@mail.com','',1040)
+INSERT INTO JEUNES VALUES('gomez melero','mohammed amine',14,'qret4537@mail.com','',1030)
+INSERT INTO JEUNES VALUES('zizaoui','youssef',12,'sdfg4345@mail.com','',1210)
+INSERT INTO JEUNES VALUES('ben addi','mahammed faysal',15,'dsgs45@mail.com','',1030)
+INSERT INTO JEUNES VALUES('ben addi','mountassir',13,'dfggq424@mail.com','',1030)
+INSERT INTO JEUNES VALUES('ben addi','ismael',8,'sçàèfdgf45@mail.com','',1030)
+INSERT INTO JEUNES VALUES('ben addi','zakaria',10,'sdfghst@mail.com','',1030)
+INSERT INTO JEUNES VALUES('ben addi','salaheddine',5,'qrts4563@mail.com','',1030)
+INSERT INTO JEUNES VALUES('ben addi','annoire',7,'vbgxgf45@mail.com','',1030)
+INSERT INTO JEUNES VALUES('madmadi','lina',6,'dfqzdfgh456@mail.com','',1030)
+INSERT INTO JEUNES VALUES('salaouat','yasmin',10,'qgqrgt45@mail.com','',1210)
+INSERT INTO JEUNES VALUES('salmi','ines',14,'gser456@mail.com','',1030)
+INSERT INTO JEUNES VALUES('salmi','nisrin',10,'dfgdfgh143@mail.com','',1030)
+INSERT INTO JEUNES VALUES('hammouda','dounia',14,'gfqegf42@mail.com','',1000)
+INSERT INTO JEUNES VALUES('sagir','butuhan',11,'bdfsht46@mail.com','',1140)
+INSERT INTO JEUNES VALUES('sagir','buse',13,'xdf453@mail.com','',1140)
+INSERT INTO JEUNES VALUES('alaoui','yasmine',14,'dfbhwds453@mail.com','',1210)
+INSERT INTO JEUNES VALUES('fraihi','mariam',13,'xdfh456@mail.com','',1030)
+INSERT INTO JEUNES VALUES('boujida', 'chaimae',20,'df545dfg@mail.com','',1210)
+INSERT INTO JEUNES VALUES('benali', 'sabria',22,'gdfg453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('bouzakhti', 'romaissae',18,'xcbvg245@mail.com','',1030)
+INSERT INTO JEUNES VALUES('achab' ,'malak',17,'fb453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('rahmouni' ,'hannan',17,'fgsdf4532@mail.com','',1210)
+INSERT INTO JEUNES VALUES('rahmouni', 'nourdin',16,'gfs453@mail.com','',1210)
+INSERT INTO JEUNES VALUES('hachmi' ,'moad',19,'sdf@mail.com','',1030)
+INSERT INTO JEUNES VALUES('el guezenay', 'nabil',21,'ezfqze@mail.com','',1030)
+INSERT INTO JEUNES VALUES('HANNOU' ,'Sefora',7,'fdsg432@mail.com','',1030)
+INSERT INTO JEUNES VALUES('AKARRAB' ,'Mohamed Said',6,'vgwf41@mail.com','',1140)
+INSERT INTO JEUNES VALUES('EL HASNAOUI', 'Nawfel',5,'bvwdf425@mail.com','',1080)
+INSERT INTO JEUNES VALUES('AQODAD' ,'Salma',7,'dfbh4352@mail.com','',1030)
+INSERT INTO JEUNES VALUES('DERRAS' ,'Hafsa',7,'dgfs45@mail.com','',1140)
+INSERT INTO JEUNES VALUES('AJAJI' ,'Ines',7,'c42jnhgf@mail.com','',1030)
+INSERT INTO JEUNES VALUES('BENHERIRA', 'Walid',12,'gfnh424@mail.com','',1140)
+INSERT INTO JEUNES VALUES('NAJIB' ,'Mounia',13,'dfgvj144@mail.com','',1000)
+INSERT INTO JEUNES VALUES('MRABET YOUSFI', 'Ibrahim',10,'dfgsf45@mail.com','',1000)
+INSERT INTO JEUNES VALUES('HADDOUTI' ,'Ibtissam',11,'dfh454@mail.com','',1000)
+INSERT INTO JEUNES VALUES('HADDOUTI', 'Bilal',10,'fgxnh453@mail.com','',1000)
+INSERT INTO JEUNES VALUES('ayad' ,'adam',10,'gfnhf45@mail.com','',1030)
+INSERT INTO JEUNES VALUES('benali' ,'bilel',10,'nbgf453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('benali' ,'ines',11,'gbfgb4536@mail.com','',1030)
+INSERT INTO JEUNES VALUES('essaadi' ,'adam ',8,'vgfbgn4364@mail.com','',1030)
+INSERT INTO JEUNES VALUES('essaadi' ,'riham',5,'fgcnh453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('el hakkouni' ,'firdaws',5,'bgfbh453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('el hakkouni', 'ayoub',12,'ffdgh453@mail.com','',1030)
+INSERT INTO JEUNES VALUES('arradi' ,'hamza',7,'ghjg45364@mail.com','',1210)
+INSERT INTO JEUNES VALUES('edaoudi' ,'rayan',8,'ghjg456@mail.com','',1140)
+INSERT INTO JEUNES VALUES('ben ssar' ,'ginan',14,'ghhjgd4153@mail.com','',1030)
+INSERT INTO JEUNES VALUES('el addass', 'yacine',14,'hftgj456@mail.com','',1000)
+INSERT INTO JEUNES VALUES('hachmi','abdelouadoud',11,'ghnjd4536@mail.com','',1030)
+INSERT INTO JEUNES VALUES('assbai' ,'kamal',17,'ghjd4523@mail.com','',1030)
+INSERT INTO JEUNES VALUES('ajaji' ,'ibrahim',15,'ghjf434@mail.com','',1140)
+INSERT INTO JEUNES VALUES('kaouane' ,'nadia',13,'fghhj4@mail.com','',1030)
+INSERT INTO JEUNES VALUES('kaouane',' ketam',9,'fgxnhcfgh156@mail.com','',1140)
+INSERT INTO JEUNES VALUES('el bouhtani' ,'manal',14,'fthdb45@mail.com','',1210)
+INSERT INTO JEUNES VALUES('el bouhtani' ,'soraya',8,'dfxsght458@mail.com','',1210)
+INSERT INTO JEUNES VALUES('el bouhtani', 'chamsdine',9,'sdwfg45@mail.com','',1210)
+INSERT INTO JEUNES VALUES('altindag','besian',6,'bhxgf4536@mail.com','',1030)
+go
+--un total de 101 jeunes qui viennet d'une des 19 communes de bruxelles agé entre 5 et 23 ans 
+--les noms prénoms sont ceux de personnes existantes mais l'age,mail ,addresse et  code postale sont fabriqués
+--
+
+
+
+INSERT INTO RESPONSABLE VALUES('ABSLIMOU','Youssef',35,'coord.samesam@mail.com','avenue de la coordination 24',1030,'coordinateur/ coach sportif /animateur ')--basket/taekwondo
+INSERT INTO RESPONSABLE VALUES('ZIZOUI','Mohamed Amine',23, 'amine0520@mail.com','boulevard de la réussite 7',1210,'etudiant')--soutien scolaire
+INSERT INTO RESPONSABLE VALUES('Essehb','Zaid',30,'zaid@MAIL.COM','chaussée du taekwondo 100',1030,'COACH SPORTIF')--taekwondo
+INSERT INTO RESPONSABLE VALUES('tahiri','ahmed',25,'tahira@MAIL.COM','rue du progres 29',1070,'assisstant sociale/animateur')--soutien scolaire/theatre
+INSERT INTO RESPONSABLE VALUES('tahiri','Loubna',25,'tahiral@MAIL.COM','rue du progres 29',1070,'animatrice')--soutien scolaire/théatre
+INSERT INTO RESPONSABLE VALUES('zidane','zinedine',40,'championfr@MAIL.COM','boulevard des légendes',1000,'coach sportif')--foot
 
 
 
 
-INSERT INTO RESPONSABLE VALUES('zizaoui','mohamed amine',23,'amine0520@hotmail.com','hkfjhjsklghtjksgh',1210,'étudiant')
-INSERT INTO RESPONSABLE VALUES('ZIZOU','MINO',23, 'TAESHADOWMASTER@MAIL.COM','DFGTDYHYUK',1210,'ANIMATEUR')
-INSERT INTO RESPONSABLE VALUES('KAZE','KAMI',25,'GROSDURE@MAIL.COM','FHJEGHJFHRJK',1030,'COACH SPORTIF')
+INSERT INTO ACTIVITES VALUES('Basket-ball','',100,2021)--15 jeunes
+INSERT INTO ACTIVITES VALUES('Taekwondo','',250,2021)--30 jeunes
+INSERT INTO ACTIVITES VALUES('soutien scolaire','',40,2022)--10 jeunes
+INSERT INTO ACTIVITES VALUES('Taekwondo','',250,2023)--30 jeunes
+INSERT INTO ACTIVITES VALUES('theatre','',30,2024)--15 jeunes
+INSERT INTO ACTIVITES VALUES('soutien scolaire','',40,2024)--10 jeunes
+INSERT INTO ACTIVITES VALUES('soutien scolaire','',40,2025)--10 jeunes
+INSERT INTO ACTIVITES VALUES('theatre','',30,2025)--15 jeunes
+INSERT INTO ACTIVITES VALUES('mini-foot','',60,2026)--20 jeunes
 
-INSERT INTO ACTIVITES VALUES('Basket-ball','',100,2022)
-INSERT INTO ACTIVITES VALUES('Taekwondo','',200,2021)
-INSERT INTO ACTIVITES VALUES('soutien scolaire','',40,2020)
-INSERT INTO ACTIVITES VALUES('mini-foot','',60,2021)
-INSERT INTO ACTIVITES VALUES('Taekwondo','',200,2020)
-
-INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13000,1)
-INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13000,2)
-INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13000,3)
-INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13001,4)
-INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13002,5)
+--inscription basket-ball
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13001,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13002,1)
 INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13003,1)
-INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13004,2)
-INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13003,3)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13004,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13005,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13006,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13007,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13008,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13009,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13010,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13011,1)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13012,1)
+--12 inscrits
+
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13013,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13014,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13015,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13016,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13017,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13018,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13019,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13020,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13021,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13022,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13023,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13024,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13025,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13026,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13027,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13028,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13029,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13030,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13031,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13032,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13033,2)--
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13034,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13035,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13036,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13037,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13038,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13039,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13040,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13041,2)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13042,2)
+
+--30 inscrits /complet
+
+--inscription taekwondo 2
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13044,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13045,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13046,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13047,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13048,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13049,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13050,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13051,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13052,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13053,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13054,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13055,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13056,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13057,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13058,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13059,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13060,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13061,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13062,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13063,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13064,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13065,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13066,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13067,4)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13068,4)	
+ --25 inscrits
+
+ --inscription foot
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13069,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13070,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13071,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13072,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13073,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13074,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13075,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13076,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13077,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13078,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13079,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13080,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13081,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13082,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13083,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13084,9)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13085,9)
+--17 inscrits
+
+--inscription theatre groupe grand
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13098,8)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13096,8)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13092,8)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13091,8)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13078,8)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13063,8)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13064,8)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13095,8)
+--8 inscrits
+
+--inscription theatre groupe petit
+
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13101,5)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13100,5)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13099,5)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13086,5)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13089,5)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13087,5)
+--7 inscrits
 
 
+--inscription soutien scolaire a partir de 15 ans
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13095,3)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13094,3)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13070,3)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13069,3)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13063,3)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13014,3)
+--7 inscrits
 
+
+--inscritpion soutien scolaire de 12 a 14
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13098,7)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13096,7)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13092,7)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13091,7)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13088,7)
+--5 inscrits
+
+--inscription soutien scolaire moins de 12 ans
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13086,6)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13087,6)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13089,6)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13090,6)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13093,6)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13099,6)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13100,6)
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13101,6)
+--8 inscrits
+--------------------------------------------------------
 --VUE CONTENANT LA LISTE DES JEUNES QUI HABITENT SCHAERBEEK
 CREATE VIEW JEUNES_SCHAERBEEKOIS AS SELECT * FROM JEUNES j WHERE CODE_POSTAL=1030 WITH CHECK OPTION
 GO
@@ -108,6 +366,13 @@ GO
 SELECT * FROM LISTE_ACTIVITES
 GO
 
+---modification affiche également le nombre d'inscrit par activités
+
+alter VIEW LISTE_ACTIVITES AS SELECT distinct a.CODE_ACTIVITES, a.TITRE, r.NOM, r.PRENOM, count(*)over(partition by i.ID_ACTIVITES) as "nombre d'inscrits" FROM ACTIVITES a 
+join RESPONSABLE r   on a.ID_RESPONSABLE=r.CODE_RESPONSABLE
+join INSCRIPTION  i on  a.CODE_ACTIVITES= i.ID_ACTIVITES
+GO
+---------------------------------------------
 --CREER UNE FONCTION scalaire QUI CALCULE LE PRIX TOTAL QU UN JEUNE DOIS PAYER S IL PARTICIPE A PLUSIEURS ACTIVITES
 
 ALTER FUNCTION prix_total(@j int)
@@ -123,16 +388,16 @@ ALTER FUNCTION prix_total(@j int)
 	END
 GO
 
-SELECT dbo.prix_total(13000)
+SELECT dbo.prix_total(13094)
 -- FONCTION TABLE QUI AFFICHE LES ACTIVITES AUX QUELS LE  JEUNES EST INSCRIT
 CREATE FUNCTION inscrit(@j int)
 returns table
 as
 return (SELECT a.TITRE,a.PRIX,a.ADRESSE FROM INSCRIPTION i LEFT JOIN ACTIVITES a on i.ID_ACTIVITES=a.CODE_ACTIVITES where i.ID_JEUNES = @j)
 
-select * from dbo.inscrit(13000)
+select * from dbo.inscrit(13094)
 
---CREATION D UNE PROCEDURE STOCKEES qui permet d'inscrire un nouveau jeune en respectant le nombre max de jeunes par activités(15)
+--CREATION D UNE PROCEDURE STOCKEES qui permet d'inscrire un nouveau jeune en respectant le nombre max de jeunes par activités
 CREATE PROCEDURE new_inscription (@nom varchar(20),@prenom varchar(20),@age int,@mail varchar(20), @codpost int,@acti int)
 AS
 BEGIN
@@ -165,3 +430,167 @@ IF @ID_JEUNES>15
 ROLLBACK
 END 
 GO
+
+-------------------------NOUVEAU
+go
+alter trigger nb_inscrit_max ON INSCRIPTION
+after insert 
+as
+begin 
+DECLARE @ID_ACTIVITES INT
+DECLARE @NB_JEUNES INT
+SELECT   @ID_ACTIVITES=  ID_ACTIVITES FROM INSERTED
+SELECT @NB_JEUNES = COUNT(*) from INSCRIPTION where ID_ACTIVITES=@ID_ACTIVITES
+
+
+if @NB_JEUNES > 15  AND @ID_ACTIVITES = 1  
+ROLLBACK
+else if @NB_JEUNES > 30  AND @ID_ACTIVITES = 2  
+ROLLBACK
+else if @NB_JEUNES > 10  AND @ID_ACTIVITES = 3   
+ROLLBACK
+else if @NB_JEUNES > 30  AND @ID_ACTIVITES = 4  
+ROLLBACK
+else if @NB_JEUNES > 15  AND @ID_ACTIVITES = 5  
+ROLLBACK
+else if @NB_JEUNES > 10  AND @ID_ACTIVITES = 6   
+ROLLBACK
+else if @NB_JEUNES > 10  AND @ID_ACTIVITES = 7   
+ROLLBACK
+else if @NB_JEUNES > 15  AND @ID_ACTIVITES = 8   
+ROLLBACK
+else if @NB_JEUNES > 20  AND @ID_ACTIVITES = 9   
+ROLLBACK
+	
+END
+GO
+
+--modification procédure 
+alter PROCEDURE new_inscription (@nom varchar(20),@prenom varchar(20),@age int,@mail varchar(20),@adres varchar(50), @codpost int,@acti varchar(20))
+AS
+BEGIN
+DECLARE @numJ int
+declare @numA  int
+if (@acti ='Basket-ball')
+	
+	set @numA=1;
+	
+else if( @acti ='Taekwondo')
+	if((SELECT COUNT(*) FROM INSCRIPTION  WHERE ID_ACTIVITES = 2 )<30)
+		set @numA=2
+	else 
+		set @numA=4
+else if @acti='soutien scolaire'
+	if @age<12
+		set @numA=6
+	else if 12<= @age and @age <15
+		set @numA=7
+	else if @age>15
+		set @numA=3
+else if @acti='théatre'
+	if @age>12
+		set @numA=8
+	else if @age<=12
+		set @numA=5
+else if @acti='mini-foot'
+	set @numA=9;
+		
+else
+	RAISERROR(' activité non disponible',12,1)
+
+begin 
+INSERT INTO JEUNES VALUES(@nom,@prenom,@age,@mail,@adres,@codpost)
+select @numJ =IDENT_CURRENT('JEUNES')
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(@numJ,@NumA)
+end
+
+end
+go
+
+----------------------------------
+
+
+
+
+--verification de la contrainte sur l'age du jeunes
+
+INSERT INTO JEUNES VALUES('vdfkj','fsrgrs',3,'fdgffffffffffdddddddddfffffffff','jfkhgfferdgls@mail.com',1080)--RENVOIS UNE ERREUR
+
+INSERT INTO JEUNES VALUES('zzzzzz','frrrrrs',27,'cdffdfs','jffdfgggddgls@mail.com',1210)--RENVOIS UNE ERREUR 
+
+INSERT INTO JEUNES VALUES('zzzzzz','frrrrrs',15,'cdffdfs','jffgdggddgls@mail.com',1000)--FONCTIONNE 
+
+--verification de la contrainte sur l'age du responsable
+
+INSERT INTO RESPONSABLE VALUES('vdfkj','fsrgrs',3,'fdgffffffffffdddddddddfffffffff','jfkegergerhgfdgls@mail.com',1080,'Bébé')--ereur
+
+INSERT INTO RESPONSABLE VALUES('zzzzxxzz','frrrxxrrs',27,'cdffdfs','jffgggddglgfs@mail.com',1210,'assistant sociale')--fonctionne
+
+INSERT INTO RESPONSABLE VALUES('zzxxzzzz','frxxrrrrs',15,'cdffdfs','jffggxxgddgegergls@mail.com',1210,'etudiant')--erreur
+
+
+
+
+--verification sur la vue jeunes schaerbeekois
+SELECT * FROM JEUNES_SCHAERBEEKOIS
+--verification sur la vue liste activités
+SELECT * FROM LISTE_ACTIVITES
+--verification sur la fonction table qui permet d'afficher
+select * from dbo.inscrit(13070)
+select * from INSCRIPTION  i where i.ID_JEUNES=13070 
+--verification sur la fonction scalaire qui calcule le prix totale q'un jeune doit payer 
+SELECT dbo.prix_total(13070)
+
+--verification  sur la procédure stocké new inscription
+exec new_inscription 'smets','alain',10,'alainsmets@mail.com','rue des bons points 16',1000,'soutien scolaire'
+
+--verification sur le trigger 
+INSERT INTO INSCRIPTION(ID_JEUNES,ID_ACTIVITES) VALUES(13043,2)--délenche le trigger car le nb inscrit  max est atteint
+
+-------------------------------------
+--question examen oral 09-06-20
+--creer une procedure stockée qui fait appelle a une fonction /PROCEDURE STOCKEE
+create procedure prix(@id int,@codepost int)
+as 
+begin
+declare @prix float
+if @codepost=1030
+	set @prix=(select dbo.prix_total(@id))*0.8
+else
+	set @prix= (select dbo.prix_total(@id))
+	 
+end
+go
+
+
+----modif
+alter procedure prix(@id int,@codepost int)--procedure qui calcule un rabais de 20% pour les schaerbeekois
+as 
+begin
+declare @prix float
+if @codepost=1030
+	set @prix=(select dbo.prix_total(@id))*0.8
+else
+	set @prix= (select dbo.prix_total(@id))
+
+print 'le prix total'
+print @prix
+end
+go
+--test 1 une jeune scharbeekoise (trouvée sur la view)
+exec prix 13101,1030
+--justification 1
+select * from dbo.inscrit(13101)
+--test 2
+exec prix 13001,1210
+--justification 2
+select * from dbo.inscrit(13001)
+
+
+
+
+
+
+
+
+
